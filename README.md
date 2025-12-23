@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# OrionBase;
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Biblioteca criada para auxiliar no entendimento de fundamentos Em React/JavaScript/TypeScript/MUI para aumentar a velocidade na criação de interfaces e componentes para o Orion.
 
-Currently, two official plugins are available:
+# Temas abordados:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fundamentos do JavaScript;
+- Fundamentos de React;
+- Fundamentos de TypeScript;
+- Fundamentos do MUI;
 
-## React Compiler
+# Para a construção da Interface foi utilizado o React/Vite, com o apoio da biblioteca MUI para a construção dos componentes.
+# Todos os componentes foram criados com a intenção de serem reutilizáveis e com a possibilidade de serem personalizados.
+# Estudos baseados em argumentos e metodos usados para a construção da interface do OrionBase.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+# Identidade visual do OrionBase:ppp
+- Design Clean
+- Cores: Azul, Branco e Preto;
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Funcionalidades presentes:
+- Filtragem de Snippets;
+- Busca pelo nome do Snippet;
+- Navegação entre Páginas;
+- Botão para abrir Modal;
+- Exemplo de Códigos;
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O Código foi Criado para ser Reutilizavel no intuito de expandir a quantidade de Snippets com o intuito de adicionar mais fundamentos 100% usados na construção da interface do Orion.
