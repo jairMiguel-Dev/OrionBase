@@ -27,10 +27,10 @@ export const lista = [
         type: 'básico',
         icon: <CloudSyncIcon/>,
         termo: 'fetch',
-        definicao: 'Usado para enviar dados para a requisição, como um chamado de API ou requisição de dados',
+        definicao: 'Usado para receber como resposta os dados, como um chamado de API ou requisição de dados',
         maincode: 'fetch(url, options)',
-        explicação: "Essa é uma forma em que podemos pedir respostas para uma API, pensando no código do UseEffect, nos pedimos uma resposta para a API e esperamos receber uma resposta desenhando toda a lógica para recebermos os dados",
-        explicação2: "No trecho abaixo estamos falando, 'Eu quero que pegue todos os dados dessa API 'users' e me retorne em forma .JSON', o chamado está começando pelo Fetch:",
+        explicação: "Essa é uma forma de responder e apresentar os dados de uma forma legivel.",
+        explicação2: "No trecho abaixo estamos falando, 'Eu quero que responda todos os dados dessa API 'users' no formato .JSON', o chamado está começando pelo Fetch:",
         maincode2: "useEffect(() => { fetch('API').then(response => response.json()).then(data => setUsers(data)); }, [users]);"
     },
     {
@@ -159,6 +159,46 @@ export const lista = [
         explicação: "pensamos que o Map apenas mapea e retorna os dados, porém ele é muito mais poderoso que isso!",
         explicação2: "Podemos pensar em map como uma forma de 'mapear' um dado dentro de uma lista, e retornar dentro das condições exigidas, abaixo foi aplicado uma regra para o Map buscar os dados da lista e retornar multiplicando eles por 2.",
         maincode2: "const array = [1, 2, 3, 4, 5]; const novoArray = array.map(item => item * 2);"
+    },
+    {
+    type: 'Básico',
+    icon: <DataObjectIcon/>,
+    termo: 'Desestruturação',
+    definicao: 'Essa é uma boa pratica em JS, principalmente em React de chamar uma propriedade de um jeito organizado!',
+    maincode: 'const { nome, idade } = usuario;',
+    explicação: "Ao invés de digitar 'usuario.nome' e 'usuario.idade' toda hora para apresentar os dados, você 'desempacota' o objeto e chama a propriedade direto em variáveis.",
+    explicação2: "Um exemplo bem prático, é a forma em que vamos apresentar os dados do usuario, vamos ver abaixo, ao invés de chamar usuario.nome e usuario.idade, vamos destruturar e chamar apenas o nome ou a idade:",
+    maincode2: "const usuario= { nome, idade }"
+    },
+    {
+    type: 'Médio',
+    icon: <InputIcon/>,
+    termo: 'HTTP POST',
+    definicao: 'Método usado para ENVIAR dados novos para o servidor (criar algo ou adicionar algo novo).',
+    maincode: 'fetch(url, { method: "POST", body: ... })',
+    explicação: "A ideia aqui é sempre manter a comunicação entre clintside e serverside, para as ações aconteçam de uma forma organizada quando o usuario realizar uma ação!",
+    explicação2: "Imagine assim, toda vez que o usuario se cadastra, o client-side precisa avisar apartir do metodo 'POST' que estamos enviando novos dados de cadastro de usuarios na plataforma.",
+    maincode2: "fetch('/api/users', { method: 'POST', body: JSON.stringify(dados) })"
+    },
+    {
+    type: "Médio",
+    icon: <InputIcon/>,
+    termo: "HTTP GET",
+    definicao: "Pense sempre que da mesma forma que precisamos enviar, precisamos RECEBER dados do servidor e apresentar na tela.",
+    maincode: "fetch(url, { method: 'GET', body: ... })",
+    explicação: "Pensando no login de um usuario, precisamos saber se o usuario já está cadastrado ou não, e para isso precisamos enviar dados 'POST' para receber 'GET' e avisar o usuario.",
+    explicação2: "Da uma olhada no código abaixo sobre como funcionaria o GET para o lógin de usuario:",
+    maincode2: "fetch('/api/users', { method: 'GET', body: JSON.stringify(dados) })"
+    },
+    {
+    type: "Médio",
+    icon: <InputIcon/>,
+    termo: "HTTP DELETE",
+    definicao: "Aqui precisamos DELETAR um dado que não faz mais sentido e para isso esse metodo é a melhor prática.",
+    maincode: "fetch(url, { method: 'DELETE', body: ... })",
+    explicação: "Vamos a um exemplo, quando o usuario criar sua conta, pela LGPD caso ele queira excluir sua conta, ele poderá realizar a exclusão e é ai que o metodo entra em ação.",
+    explicação2: "No código abaixo, vamos pensar que o usuario apertou e confirmou a exclusão da sua conta, agora precisamos notificar o servidor:",
+    maincode2: "fetch('/api/users', { method: 'DELETE', body: JSON.stringify(dados) })"
     },
     // {
     //     icon:
