@@ -200,6 +200,26 @@ export const lista = [
     explicação2: "No código abaixo, vamos pensar que o usuario apertou e confirmou a exclusão da sua conta, agora precisamos notificar o servidor:",
     maincode2: "fetch('/api/users', { method: 'DELETE', body: JSON.stringify(dados) })"
     },
+    {
+    type: "Médio",
+    icon: <InputIcon/>,
+    termo: "HTTP PUT",
+    definicao: "Aqui precisamos ATUALIZAR um dado e para isso esse metodo é a melhor prática é usar o método PUT.",
+    maincode: "fetch(url, { method: 'PUT', body: ... })",
+    explicação: "Vamos a um exemplo, quando o usuario criar sua conta, pela LGPD caso ele queira excluir sua conta, ele poderá realizar a exclusão e é ai que o metodo entra em ação.",
+    explicação2: "No código abaixo, vamos pensar que o usuario apertou e confirmou a exclusão da sua conta, agora precisamos notificar o servidor:",
+    maincode2: "fetch('/api/users', { method: 'PUT', body: JSON.stringify(dados) })"
+    },
+    {
+        type: "Médio",
+        icon: <InputIcon/>,
+        termo: "indexOf()",
+        definicao: "Vamos pensar no fato de encontrar um item dentro de uma lista, precisamos entender sua posição ou seu Índece, 'Qual o índice de?'",
+        maincode: "array.indexOf(item)",
+        explicação: "Para apresentar algo, o interpretador precisa saber oquê, de onde e como, e ai que entra o IndexOf, ele precisa informar qual a posição do item para o interpretador poder ler e execultar.",
+        explicação2: "Pense em algo como:",
+        maincode2: "const array = [1, 2, 3, 4, 5]; const indice = array.indexOf(item => item === -1)else{console.log('Item não encontrado');};"
+    }
     // {
     //     icon:
     //     termo:

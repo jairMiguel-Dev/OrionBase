@@ -21,10 +21,10 @@ function DicionarioJS() {
   return (
     <>
       <Grid container sx={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }} spacing={3}>
-        <Typography variant="h4" sx={{ marginBottom: '1rem' }}>Dicionário de JavaScript</Typography>
+        <Typography variant="h4" sx={{ marginBottom: '1rem' }}>Dicionário de TypeScript</Typography>
         <Grid container spacing={5}>
         <Link to="https://www.w3schools.com/js/js_intro.asp" target="_blank"><button>W3Schools</button></Link>
-        <Link to="/TypeScript"><button>Dicionário de TypeScript</button></Link>
+        <Link to="/"><button>Dicionário de JavaScript</button></Link>
         <Link to="/MUI"><button>Dicionário de MUI</button></Link>
         <Link to="/React"><button>Dicionário de React</button></Link>
         </Grid>

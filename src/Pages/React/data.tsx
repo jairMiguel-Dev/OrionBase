@@ -1,0 +1,57 @@
+import InputIcon from '@mui/icons-material/Input';
+
+export const lista = [
+    {
+        type: "básico",
+        icon: <InputIcon/>,
+        termo: "React",
+        definicao: "Framework para desenvolvimento de interfaces de usuário",
+        explicacao: "React é uma biblioteca JavaScript para construção de interfaces de usuário, tudo passa por JavaScript quando o assunto é React!",
+    },
+    {
+        type: "básico",
+        icon: <InputIcon/>,
+        termo: "JSX",
+        definicao: "É a forma de escrever HTML dentro do JavaScript",
+        explicacao: "Quando usamos o JSX, estamos escrevendo HTML dentro do JavaScript, isso facilita a criação de interfaces de usuário, que vamos usar muito no React!",
+    },
+    {
+        type: "básico",
+        icon: <InputIcon/>,
+        termo: "Componente",
+        definicao: "É a forma de criar uma interface de usuário, quebrando em partes, cada arquivo se torna um componente.",
+        explicacao: "Vamos pensar assim, que cada arquivo do React é como uma peça de um puzzle, cada uma com sua função específica, e quando juntas formam uma imagem completa.",
+        explicacao2: "Para comunicação entre os componentes, usamos props e estados.",
+        maincode: "import React from 'react';",
+    },
+    {
+        type: "Médio",
+        icon: <InputIcon/>,
+        termo: "Props",
+        definicao: "É a forma de comunicação entre o componente pai e filho, tudo dentro do react acontece por meio de uma comunicação entre componentes.",
+        explicacao: "Vamos pensar em uma SideBar, para ela saber que o componente Pai está orientando ela abrir ou fechar, ela precisa sempre está aguardando uma orientação, e isso acontece por meio da cominucação de PROPS.",
+        explicacao2: "O filho sempre irá armazenar uma propriedade que espera uma ordem do pai, enquando o pai é responsavel em ordenar quando agir:",
+        maincode: "Open={Open}",
+        maincode2: "Open={setOpen(!Open)}",
+    },
+    {
+        type: "Médio",
+        icon: <InputIcon/>,
+        termo: "useState",
+        definicao: "É a forma de manipular os dados dentro do React, tudo acontece por meio de uma comunicação por uma variável Setada.",
+        explicacao: "O React sempre tenta entender se ele pode ou não mudar o estado de um dado, e para isso ele sempre renderiza a tela. É ai que entra a função primordial da variável Setada;",
+        explicacao2: "Toda vez que o React tenta atualizar um dado, ele renderiza tudo por completo, e ai que ele entender que o valor 'false' mudou para 'true':",
+        maincode: "const [Open, setOpen] = useState(false);",
+        maincode2: "Open={setOpen(!Open)}",
+    },
+    {
+        type: "Avançado",
+        icon: <InputIcon/>,
+        termo: "useEffect",
+        definicao: "Imagine que precisamos receber dados de uma API, e se jogar os dados na tela de uma vez poderia ficar tudo bagunçado ou travar a interface do usuario!",
+        explicacao: "è Ai que o Useffect atua, quando os dados chega ele força uma renderização e adiciona os dados, fazendo com que tudo aconteça sem prejedicar ninguém.",
+        explicacao2: "A forma mais simples de entender é assim:",
+        maincode: "useEffect(() => {\n    console.log('useEffect');\n}, []);",
+        maincode2: "useEffect(() => {fetch(URL).then(response => response.json()).then(data => setData(data)); }, [Open]);",
+    },
+]
